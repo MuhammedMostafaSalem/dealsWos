@@ -179,3 +179,59 @@ header .container ul li a {
 }
 /* end style for header component */
 
+
+
+
+/* start style for SubTitle component */
+.top_slide{
+  position: relative;
+  margin-bottom: 20px;
+  border-bottom: 3px solid orange;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top_slide h2{
+  position: relative;
+  text-transform: uppercase;
+  background-color: orange;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+.top_slide h2::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  z-index: 9;
+  border-left: 20px solid transparent;
+  background: #fff;
+  left: 0;
+  border-bottom: 20px solid #e26e02;
+}
+
+.top_slide h2 svg{
+  color: #fff;
+}
+.btnSlides {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: -5px;
+}
+.btnSlides .btn {
+  background-color: #d1d1d13b;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+}
+/* end style for SubTitle component */
