@@ -1,0 +1,15 @@
+.container {
+    padding: 15px 100px;
+}
+
+.boxs {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
