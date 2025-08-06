@@ -11,6 +11,8 @@ body {
 /* start style for header component */
 header {
   width: 100%;
+  background-color: #fff;
+  box-shadow: 5px 8px 8px #d1d1d13b;
 }
 
 header .container {
@@ -41,6 +43,7 @@ header .container .menu .dropdown {
 }
 
 header .container .menu .dropdown .dropdownMenu {
+  background-color: #fff;
   position: absolute;
   top: 25px;
   right: 10px;
