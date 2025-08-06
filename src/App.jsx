@@ -1,3 +1,4 @@
+import Slider from "./components/slider/Slider"
 import Header from "./components/utils/header"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Header />
+      <Slider />
     </>
   )
 }
