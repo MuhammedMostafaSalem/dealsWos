@@ -1,68 +1,178 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  font-family: "Oxygen", sans-serif;
+}
+
+
+/* start style for header component */
+header {
+  width: 100%;
+}
+
+header .container {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 15px 100px;
+  gap: 50px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header .container img {
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+header .container .menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: left 1s ease-in-out;
+}
+header .container .menu .navs {
+  color: #0000007a;
+}
+
+header .container .menu .dropdown {
+  position: relative;
+}
+
+header .container .menu .dropdown .dropdownMenu {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  width: 200px;
+  border: 1px solid #6e6d6d7a;
+  border-radius: 10px;
+}
+
+header .container .menu .dropdown .dropdownMenu .dropdown-divider {
+  border-top: 1px solid #6e6d6d7a;
+}
+
+header .container .menu .dropdown .dropdownMenu ul {
+  flex-direction: column;
+  gap: 5px;
+  color: #000 !important;
+  padding: 8px;
+}
+
+header .container .menu .dropdown .dropdownMenu ul li {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  font-size: 18px;
+}
+
+
+header .container .menu .dropdown .dropdownMenu ul li:hover {
+  background-color: #6e6d6d7a;
+  border-radius: 10px;
+}
+
+header .container .menu .dropdown .dropdownMenu ul,
+header .container ul {
+  list-style: none;
+  display: flex;
+}
+
+header .container .menu .dropdown .dropdownMenu ul,
+header .container ul,
+header .container .menu .dropdown  {
+  text-transform: capitalize;
+}
+
+header .container .navs {
+  gap: 15px;
+}
+header .container .navs li:first-child {
+  display: none;
+}
+header .container .navs li svg,
+header .container .iconMenu {
+  font-size: 25px;
+}
+header .container .iconMenu {
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  display: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+header .container ul li {
+  font-size: 20px;
+}
+
+header .container ul li a {
+  text-decoration: none;
+  color: #0000007a;
+}
+
+
+
+@media (max-width: 992px) {
+  header .container {
+    padding: 15px 80px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  header .container ul li {
+    font-size: 18px;
   }
 }
+@media (max-width: 768px) {
+  header .container {
+    padding: 15px 50px;
+  }
+  header .container ul li {
+    font-size: 16px;
+  }
+  header .container .menu .dropdown .dropdownMenu ul li {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  header .container {
+    position: relative;
+    gap: 30px;
+    align-items: center;
+  }
+  header .container .iconMenu {
+    display: block;
+  }
+  header .container .menu {
+    position: absolute;
+    top: 0;
+    left: -95%;
+    width: 95%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+  }
+  header .container .openMenu {
+    left: 0;
+  }
+  header .container ul {
+    flex-direction: column;
+  }
+  header .container .navs {
+    gap: 0;
+    width: 100%;
+  }
+  header .container .navs li {
+    border-bottom: 1px solid #6e6d6d7a;
+    padding: 25px 20px;
+  }
+  header .container .navs li:first-child {
+    display: block;
+    text-align: end;
+  }
+  header .container .navs li:first-child svg {
+    cursor: pointer;
+  }
+  header .container .menu .dropdown {
+    padding: 25px 20px;
+  }
+}
+/* end style for header component */
+
